@@ -19,3 +19,13 @@ exports.save = function(picker, _bottle, callback) {
     callback(err);
   });
 };
+
+//获取用户捡到的所有漂流瓶
+exports.getAll = function(user, callback) {
+  bottleModel.find({"bottle": user}, function(err, bottle) {
+    if(err) {
+      return callback({code: 0, msg: "获取漂流瓶列表失败..."});
+    }
+    callback({code: 1, msg: bottles});
+  });
+};
