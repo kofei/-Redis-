@@ -28,6 +28,14 @@ app.get('/', function (req, res) {
 		return res.json({code: 0, msg: "类型错误"});
 	}
 	redis.pick(req.query, function (result) {
+		if (result.code === 1) {
+			mongodb.save(req.query.user, result.mag, function(err) {
+				if(err) {
+					return res.json({code: 0, mag: "获取漂流瓶失败，请重试"});
+				}
+				return res.json(result);
+			});
+		}
 		res.json(result);
 	});
 });
