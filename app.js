@@ -74,4 +74,15 @@ exports.getOne = function(_id, callback) {
 	});
 };
 
+//回复特定 ID 的漂流瓶
+//POST user = xxx & content=xxx & [&time=xxx]
+app.post('/reply/:_id', function(req, res) {
+	if (!(req.body.user && req.body.content)) {
+		return callback({code: 0, msg: "回复信息不完整！"});
+	}
+	mongodb.reply(req.params._id, req.body, function(result) {
+		res.json(result);
+	});
+});
+
 app.listen(3000);
