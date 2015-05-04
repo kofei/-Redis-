@@ -10,7 +10,8 @@ GET /?user = xxx [type=xxx]
 ```
 #####`GET`参数
 * `user:`捡漂流瓶的人的用户名或`ID`，必须唯一。
-* `type:`漂流瓶类型，分三类：all， male， female
+* `type:`漂流瓶类型，分三类：all， male， female。
+
 #####返回的`JSON`参数
 * `code:`标识码，1表示成功，0表示失败。
 * `mag:`返回的信息。
@@ -18,6 +19,7 @@ GET /?user = xxx [type=xxx]
 * `owner:`漂流瓶主人，用户名或`ID`任意一个。
 * `type:`类型，male或female。
 * `content:`内容。
+
 ####以`POST`请求服务器，扔出一个漂流瓶，返回`JSON`数据：
 ``` node.js
 POST owner = xxx & type=xxx & content=xxx [&time=xxx]
