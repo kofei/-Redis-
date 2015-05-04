@@ -10,10 +10,10 @@ var pool = poolModule.Pool({
   destroy  : function(client) {
     client.quit();
   },
-  max      : 100,
-  min      : 5,
-  idleTimeoutMillis : 30000,
-  log      : true
+  max: 100,
+  min: 5,
+  idleTimeoutMillis: 30000,
+  log: true
 });
 
 // 检查用户是否超过扔瓶次数限制
