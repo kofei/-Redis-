@@ -56,4 +56,22 @@ app.get('/user/:user', function(req, res) {
 	});
 });
 
+//获取特定 ID 的漂流瓶
+//GET /bottle/4565648687safghgjhjff
+app.get('/bottle/:_id', function(req, res) {
+	mongodb.getOne(req.params._id, function(result) {
+		res.json(result);
+	});
+});
+
+exports.getOne = function(_id, callback) {
+	//通过 ID 获取特定的漂流瓶
+	bottleModel.findById(_id, function(err, bottle) {
+		if(err) {
+			return callback({code: 0, msg: "读取漂流瓶失败..."});
+		}
+		callback({code: 1, msg: bottle});
+	});
+};
+
 app.listen(3000);
