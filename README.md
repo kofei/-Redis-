@@ -8,4 +8,5 @@ GET /?user = xxx [type=xxx]
 // {"code: 1, msg: {"time": "...", "owner": "...", "type": "...", "content": "..."}}
 // ERROR return {"code": 0, "msg": "..."}
 ```
-
+####`GET`参数
+-`**GET**:`
