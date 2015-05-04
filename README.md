@@ -10,3 +10,4 @@ GET /?user = xxx [type=xxx]
 ```
 ####`GET`参数
 -**`GET`:**
+-
