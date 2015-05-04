@@ -9,5 +9,5 @@ GET /?user = xxx [type=xxx]
 // ERROR return {"code": 0, "msg": "..."}
 ```
 ####`GET`参数
-######    *`GET`:
+######*		`GET:`
 
