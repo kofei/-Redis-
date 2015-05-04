@@ -8,11 +8,11 @@ GET /?user = xxx [type=xxx]
 // {"code: 1, msg: {"time": "...", "owner": "...", "type": "...", "content": "..."}}
 // ERROR return {"code": 0, "msg": "..."}
 ```
-#####				(1).`GET`参数
+#####(1).`GET`参数
 * `user:`捡漂流瓶的人的用户名或`ID`，必须唯一。
 * `type:`漂流瓶类型，分三类：all， male， female。
 
-#####				(2)返回的`JSON`参数
+#####(2)返回的`JSON`参数
 * `code:`标识码，1表示成功，0表示失败。
 * `mag:`返回的信息。
 * `time:`漂流瓶扔出的时间戳。
