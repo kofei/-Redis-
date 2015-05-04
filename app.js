@@ -48,4 +48,12 @@ app.post('/back', function(req, res) {
 	});
 });
 
+//获取一个用户所用的漂流瓶
+//GET /user/nswbnw
+app.get('/user/:user', function(req, res) {
+	mongodb.getAll(req.params.user, function(result) {
+		res.json(result);
+	});
+});
+
 app.listen(3000);
