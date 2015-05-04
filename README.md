@@ -9,7 +9,7 @@ GET /?user = xxx [type=xxx]
 // ERROR return {"code": 0, "msg": "..."}
 ```
 #####`GET`参数
-######-`user:`捡漂流瓶的人的用户名或`ID`，必须唯一。
+    * ######-`user:`捡漂流瓶的人的用户名或`ID`，必须唯一。
 ######-`type:`漂流瓶类型，分三类：all， male， female
 #####返回的`JSON`参数
 ######-`code:`标识码，1表示成功，0表示出错。
@@ -23,3 +23,4 @@ GET /?user = xxx [type=xxx]
 POST owner = xxx & type=xxx & content=xxx [&time=xxx]
 // SUCCESS return {"code": 1, "msg": "..."}
 // ERROR return {"code": 0, "msg": "..."}
+```
